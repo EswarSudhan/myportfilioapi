@@ -7,7 +7,7 @@ const app = express();
 
 app.use(cors(
     { origin:["https://eswarsudhan.vercel.app/"],
-    methods:["GET","POST"],
+    methods:'GET,PUT',
     credentials:true}
 ));
 app.use(express.static('uploads'));
