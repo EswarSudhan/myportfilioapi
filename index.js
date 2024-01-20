@@ -6,7 +6,7 @@ const cors = require("cors");
 const app = express();
 
 app.use(cors(
-    { origin:["https://myportfilioapi.vercel.app"]}
+    { origin:["https://eswarsudhan.vercel.app/"]}
 ));
 app.use(express.static('uploads'));
 
