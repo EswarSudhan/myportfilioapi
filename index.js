@@ -5,7 +5,12 @@ const path = require('path');
 const cors = require("cors");
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: ['https://eswarsudhan.vercel.app'], // Add other origins as needed
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+  optionsSuccessStatus: 204,
+}));
 app.use(express.static('uploads'));
 
 const PORT = process.env.PORT || 5001;
